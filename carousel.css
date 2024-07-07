@@ -1,12 +1,42 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+
+:root {
+  --bg-galery: #fbe9f1;
+  --btn-color: #ed2bea;
+  --btn-hover: #b72492;
+  --btn-secondary:  #542648;
+}
+
+[data-bs-theme="dark"] {
+  --bg-galery: #d29db4;
+  --btn-color: #a871a8;
+  --btn-hover: #932b8a;
+}
 
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: rgb(var(--bs-tertiary-color-rgb));
 }
+
+.btn {
+  background-color: var(--btn-color);
+  border: none !important;
+}
+.btn.btn-secondary{
+  color: var(--btn-secondary);
+}
+
+.btn.btn-secondary:hover {
+  color: #f0eaf0;
+  
+}
+
+.btn:hover, .btn:focus, .btn:visited, .btn:active {
+  background-color: var(--btn-hover) !important;
+}
+
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -35,12 +65,12 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+.chef .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
 /* rtl:begin:ignore */
-.marketing .col-lg-4 p {
+.chef .col-lg-4 p {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
@@ -75,13 +105,18 @@ img.bd-placeholder-img {
 .row .clb {
   text-align: center;
   padding-bottom: 40px;
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+#galery {
+  background-color: var(--bg-galery);
 }
 
 /* rtl:end:remove */
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
+
 
 @media (min-width: 40em) {
   /* Bump up size of carousel content */
@@ -101,6 +136,13 @@ img.bd-placeholder-img {
     margin-top: 7rem;
   }
 }
+
+@media (min-width: 1200px) {
+  .carousel-item img {
+    transform: translateY(-18%);
+  }
+}
+
 
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
@@ -153,23 +195,6 @@ img.bd-placeholder-img {
   text-align: center;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
-}
-
-.btn-bd-primary {
-  --bd-violet-bg: #712cf9;
-  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-  --bs-btn-font-weight: 600;
-  --bs-btn-color: var(--bs-white);
-  --bs-btn-bg: var(--bd-violet-bg);
-  --bs-btn-border-color: var(--bd-violet-bg);
-  --bs-btn-hover-color: var(--bs-white);
-  --bs-btn-hover-bg: #6528e0;
-  --bs-btn-hover-border-color: #6528e0;
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-  --bs-btn-active-color: var(--bs-btn-hover-color);
-  --bs-btn-active-bg: #5a23c8;
-  --bs-btn-active-border-color: #5a23c8;
 }
 
 .bd-mode-toggle {
